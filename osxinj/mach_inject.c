@@ -15,7 +15,8 @@
 #include <stdio.h>  // for printf()
 #include <mach-o/fat.h> // for fat structure decoding
 #include <mach-o/arch.h> // to know which is local arch
-#include <fcntl.h> // for open/close
+#include <fcntl.h> // for open
+#include <unistd.h> // for close
 // for mmap()
 #include <sys/types.h>
 #include <sys/mman.h>
@@ -327,7 +328,7 @@ machImageForPointer(
 				}
 				
 				munmap (fileImage, mapSize);
-				close (fd);
+				close(fd);
 			}
 #if defined(__i386__) // this segment is only available on IA-32
 			if (jumpTableOffset && jumpTableSize) {

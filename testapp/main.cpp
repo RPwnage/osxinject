@@ -1,8 +1,7 @@
 #include <cstdio>
 #include <unistd.h>
 
-int sigscan_me()
-{
+int sigscan_me(){
     int ret = printf("sigscan_me()\n");
     ret += 3;
     ret *= 3;
@@ -27,8 +26,7 @@ int sigscan_me()
 //    int a, b, c, d, e;
 //};
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]){
     printf("testapp reporting in!\n");
 //    int x;
 //    scanf("%d", &x);
