@@ -8,10 +8,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-int main(int argc, char* argv[])
-{
-    if (argc < 3)
-    {
+int main(int argc, char* argv[]){
+    if (argc < 3){
         fprintf(stderr, "Usage: ./osxinj [proc_name] [lib]\n");
         return -1;
     }
@@ -29,8 +27,7 @@ int main(int argc, char* argv[])
     Injector inj;
     
     pid_t pid = inj.getProcessByName(argv[1]);
-    if (!pid)
-    {
+    if (!pid){
         fprintf(stderr, "process %s not found\n", argv[1]);
         return 0;
     }

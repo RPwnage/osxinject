@@ -11,13 +11,12 @@
 #include <sys/stat.h>
 #include <sys/errno.h>
 #include <assert.h>
-#include <stdlib.h> // for malloc()
-#include <stdio.h>  // for printf()
-#include <mach-o/fat.h> // for fat structure decoding
-#include <mach-o/arch.h> // to know which is local arch
-#include <fcntl.h> // for open
-#include <unistd.h> // for close
-// for mmap()
+#include <stdlib.h>         // for malloc()
+#include <stdio.h>          // for printf()
+#include <mach-o/fat.h>     // for fat structure decoding
+#include <mach-o/arch.h>    // to know which is local arch
+#include <fcntl.h>          // for open
+#include <unistd.h>         // for close
 #include <sys/types.h>
 #include <sys/mman.h>
 
@@ -48,16 +47,10 @@ void* fixedUpImageFromImage (
 #pragma mark	(Interface)
 
 mach_error_t
-mach_inject(
-            const mach_inject_entry	threadEntry,
-            const void				*paramBlock,
-            size_t					paramSize,
-            pid_t					targetProcess,
-            vm_size_t				stackSize )
-{
-	assert( threadEntry );
-	assert( targetProcess > 0 );
-	assert( stackSize == 0 || stackSize > 1024 );
+mach_inject(const mach_inject_entry	threadEntry, const void *paramBlock, size_t paramSize, pid_t targetProcess, vm_size_t stackSize){
+	assert(threadEntry);
+	assert(targetProcess > 0);
+	assert(stackSize == 0 || stackSize > 1024);
 	
 	//	Find the image.
 	const void		*image;
