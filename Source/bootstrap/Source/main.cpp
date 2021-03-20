@@ -13,6 +13,7 @@
 #include <mach/error.h>
 #include <mach/vm_types.h>
 #include <stddef.h>
+#include <dlfcn.h>
 
 #define DLLEXPORT __attribute__((visibility("default")))
 
@@ -26,16 +27,14 @@ extern "C" void PTHREAD_SET_SELF(void*);
 
 extern "C" void bootstrap(ptrdiff_t offset, void *param, size_t psize, void *dummy) DLLEXPORT;
 
-void *loaderThread(void *patch_bundle)
-{
+void *loaderThread(void *patch_bundle) {
     void *bundle = dlopen((char *)patch_bundle, RTLD_NOW);
     if (!bundle)
         fprintf(stderr, "Could not load patch bundle: %s\n", dlerror());
     return 0;
 }
 
-void bootstrap(ptrdiff_t offset, void *param, size_t psize, void *dummy)
-{
+void bootstrap(ptrdiff_t offset, void *param, size_t psize, void *dummy) {
     PTHREAD_SET_SELF(dummy);
 
     pthread_attr_t attr;

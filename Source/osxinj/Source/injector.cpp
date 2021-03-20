@@ -34,6 +34,7 @@ Injector::~Injector(){
     }
 }
 
+
 void Injector::inject(pid_t pid, const char* lib){
     mach_error_t err;
     if (!module || !bootstrapfn){
