@@ -2,7 +2,7 @@
 
 void install(void) __attribute__ ((constructor));
 
-void install()
-{
+void install(){
     printf("hello, world!\n");
+    return;
 }

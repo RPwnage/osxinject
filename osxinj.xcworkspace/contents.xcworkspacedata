@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:osxinj/osxinj.xcodeproj">
+      location = "group:../../../.Trash/bootstrap.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:bootstrap/bootstrap.xcodeproj">
+      location = "group:osxinj/osxinj.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:testdylib/testdylib.xcodeproj">

@@ -3,38 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C438F97217B4222E00C028FE /* injector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C46F6D6717B41D33000369C2 /* injector.cpp */; };
-		C438F97317B4222E00C028FE /* injector.h in Sources */ = {isa = PBXBuildFile; fileRef = C46F6D6817B41D33000369C2 /* injector.h */; };
-		C438F97417B4222E00C028FE /* mach_inject.c in Sources */ = {isa = PBXBuildFile; fileRef = C46F6D6917B41D33000369C2 /* mach_inject.c */; };
-		C438F97517B4222E00C028FE /* mach_inject.h in Sources */ = {isa = PBXBuildFile; fileRef = C46F6D6A17B41D33000369C2 /* mach_inject.h */; };
-		C438F97617B4222E00C028FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C46F6D6B17B41D33000369C2 /* main.cpp */; };
-		C438F97717B4246F00C028FE /* osxinj in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F6D2017B41A53000369C2 /* osxinj */; };
+		2371BA6226064D5600B9C221 /* injector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2371BA5E26064D5600B9C221 /* injector.cpp */; };
+		2371BA6326064D5600B9C221 /* mach_inject.c in Sources */ = {isa = PBXBuildFile; fileRef = 2371BA5F26064D5600B9C221 /* mach_inject.c */; };
+		2371BA6426064D5600B9C221 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2371BA6126064D5600B9C221 /* main.cpp */; };
+		C438F97717B4246F00C028FE /* osxinj in Copy Files */ = {isa = PBXBuildFile; fileRef = C46F6D2017B41A53000369C2 /* osxinj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C46F6D1E17B41A53000369C2 /* CopyFiles */ = {
+		C46F6D1E17B41A53000369C2 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = bin;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
-				C438F97717B4246F00C028FE /* osxinj in CopyFiles */,
+				C438F97717B4246F00C028FE /* osxinj in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2371BA5D26064D5600B9C221 /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = "<group>"; };
+		2371BA5E26064D5600B9C221 /* injector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = injector.cpp; sourceTree = "<group>"; };
+		2371BA5F26064D5600B9C221 /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = "<group>"; };
+		2371BA6026064D5600B9C221 /* injector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = injector.h; sourceTree = "<group>"; };
+		2371BA6126064D5600B9C221 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C46F6D2017B41A53000369C2 /* osxinj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = osxinj; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46F6D6717B41D33000369C2 /* injector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = injector.cpp; sourceTree = SOURCE_ROOT; };
-		C46F6D6817B41D33000369C2 /* injector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = injector.h; sourceTree = SOURCE_ROOT; };
-		C46F6D6917B41D33000369C2 /* mach_inject.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = SOURCE_ROOT; };
-		C46F6D6A17B41D33000369C2 /* mach_inject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = SOURCE_ROOT; };
-		C46F6D6B17B41D33000369C2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,11 +47,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2371BA5C26064D5600B9C221 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2371BA5D26064D5600B9C221 /* mach_inject.h */,
+				2371BA5E26064D5600B9C221 /* injector.cpp */,
+				2371BA5F26064D5600B9C221 /* mach_inject.c */,
+				2371BA6026064D5600B9C221 /* injector.h */,
+				2371BA6126064D5600B9C221 /* main.cpp */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		23A377222604FD990025557E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C46F6D1717B41A53000369C2 = {
 			isa = PBXGroup;
 			children = (
-				C46F6D2217B41A53000369C2 /* Source */,
+				2371BA5C26064D5600B9C221 /* Source */,
 				C46F6D2117B41A53000369C2 /* Products */,
+				23A377222604FD990025557E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,19 +83,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C46F6D2217B41A53000369C2 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				C46F6D6717B41D33000369C2 /* injector.cpp */,
-				C46F6D6817B41D33000369C2 /* injector.h */,
-				C46F6D6917B41D33000369C2 /* mach_inject.c */,
-				C46F6D6A17B41D33000369C2 /* mach_inject.h */,
-				C46F6D6B17B41D33000369C2 /* main.cpp */,
-			);
-			name = Source;
-			path = osxinj;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,7 +92,7 @@
 			buildPhases = (
 				C46F6D1C17B41A53000369C2 /* Sources */,
 				C46F6D1D17B41A53000369C2 /* Frameworks */,
-				C46F6D1E17B41A53000369C2 /* CopyFiles */,
+				C46F6D1E17B41A53000369C2 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -107,7 +113,7 @@
 				ORGANIZATIONNAME = stanleycen;
 			};
 			buildConfigurationList = C46F6D1B17B41A53000369C2 /* Build configuration list for PBXProject "osxinj" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -129,11 +135,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C438F97217B4222E00C028FE /* injector.cpp in Sources */,
-				C438F97317B4222E00C028FE /* injector.h in Sources */,
-				C438F97417B4222E00C028FE /* mach_inject.c in Sources */,
-				C438F97517B4222E00C028FE /* mach_inject.h in Sources */,
-				C438F97617B4222E00C028FE /* main.cpp in Sources */,
+				2371BA6226064D5600B9C221 /* injector.cpp in Sources */,
+				2371BA6326064D5600B9C221 /* mach_inject.c in Sources */,
+				2371BA6426064D5600B9C221 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
