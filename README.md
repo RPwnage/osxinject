@@ -25,3 +25,6 @@ You'll be given a small executable, with 2 shown hardcoded memory addresses, lea
 ![image](https://user-images.githubusercontent.com/33968601/111888580-008e4180-89de-11eb-83a6-99ea5a0f48f6.png)
 Using the given dylib source (`/Samples/SimpleApplication/testdylib`) you'll be able to hook into the program, create a reference to the integer and boolean objects by creating a pointer to the shown addresses, and then printing out the values.
 ![image](https://user-images.githubusercontent.com/33968601/111888616-51059f00-89de-11eb-812c-10ca36fd8369.png)
+
+## Credits
+This a fork of [this original repo](https://github.com/scen/osxinj)
